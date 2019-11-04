@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/titleFragment">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.maku.guessitreplica.ui.ui.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.maku.guessitreplica.ui.title.TitleFragment"
+        android:label="TitleFragment"
+        tools:layout="@layout/title_fragment" >
+        <action
+            android:id="@+id/action_titleFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.maku.guessitreplica.ui.score.ScoreFragment"
+        android:label="ScoreFragment"
+        tools:layout="@layout/score_fragment">
+        <action
+            android:id="@+id/action_restart"
+            app:destination="@+id/nav_home" />
+        <argument
+            android:name="score"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+
+</navigation>
