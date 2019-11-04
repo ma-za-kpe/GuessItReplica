@@ -6,6 +6,13 @@ Guess It is a word guessing app you can play with one or more friends. To play, 
 
 If you get the word right, press Got It. If you're stuck, press Skip. The game runs for a minute and then shows you your score.
 
+## Installation
+- clone this repo
+- cd into the project
+- click to Build
+- click to RUN
+- play
+
 ## Download an play it here
 [APK file](https://drive.google.com/open?id=1CqXo14686kB7WUME4qdxShMAEvf7GUtE)
 
